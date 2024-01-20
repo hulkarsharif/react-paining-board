@@ -1,0 +1,25 @@
+.container {
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    width: 20px;
+    height: 30px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+button {
+    margin-left: 20px;
+    background-color: rgb(42, 159, 165);
+}
