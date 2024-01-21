@@ -5,9 +5,10 @@ import Grid from "./grid/Grid";
 import ColorPalette from "./palette/Palette";
 
 function App() {
-    const initialGridState = Array.from({ length: 50 }, () =>
-        Array(50).fill(0)
-    );
+    const initialGridState = Array(30)
+        .fill()
+        .map(() => Array(30).fill(null));
+
     const [gridState, setGridState] = useState(initialGridState);
     const [selectedColor, setSelectedColor] = useState(null);
 
@@ -24,16 +25,15 @@ function App() {
     };
 
     const handleClearAll = () => {
-        const clearedGridState = Array.from({ length: 50 }, () =>
-            Array(50).fill(0)
-        );
+        const clearedGridState = Array(30)
+            .fill()
+            .map(() => Array(30).fill("white"));
         setGridState(clearedGridState);
         setSelectedColor(null);
     };
 
     return (
         <div className="container">
-            <h1>React Painting Board</h1>
             <div className="container">
                 <ColorPalette onColorSelect={handleColorSelect} />
                 <Grid gridState={gridState} onCellClick={handleCellClick} />

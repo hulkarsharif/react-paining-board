@@ -6,7 +6,7 @@ const colors = ["black", "red", "blue", "yellow", "gray", "green"];
 
 function ColorPalette({ onColorSelect }) {
     return (
-        <div className="container">
+        <div className="palette">
             {colors.map((color) => (
                 <div
                     key={color}

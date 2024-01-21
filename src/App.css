@@ -11,6 +11,10 @@
     border: 1px solid #ccc;
     cursor: pointer;
 }
+.palette {
+    margin-top: 20%;
+    display: block;
+}
 
 .cell {
     width: 20px;
